@@ -1,16 +1,15 @@
-const swiper = new Swiper('.swiper-container', {
+const hotelSwiper = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.slider-button--next',
-    prevEl: '.slider-button--prev',
+    nextEl: '.hotel-slider__button--next',
+    prevEl: '.hotel-slider__button--prev',
   },
   effect: 'fade',
 
   keyboard: {
-    enabled: true,
-    onlyInViewport: false,
+    keyboardOptions: true,
   },
 });
