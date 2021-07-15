@@ -1,7 +1,6 @@
 const hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
-  autoHeight: true,
   // Navigation arrows
   navigation: {
     nextEl: '.hotel-slider__button--next',
