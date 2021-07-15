@@ -20,59 +20,59 @@
     &__img
       object-fit: cover
   &-slider
-   width: 100%
-   height: 100%
-   position: relative
-   border-radius: 8px
-   &:after
-     content: ''
-     position: absolute
-     width: 100%
-     height: 100%
-     top: 0
-     bottom: 0
-     right: 0
-     left: 0
-     background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
-     z-index: 10
-   &__button
-     position: absolute
-     top: 50%
-     transform: translateY(-50%)
-     z-index: 99
-     width: 30px
-     height: 30px
-     border: none
-     cursor: pointer
-     background-repeat: no-repeat
-     background-position: center
-     background-size: 10px
-     background-color: transparent
-     &--next
-       right: 18px
-       background-image: url(../img/arrow-next.svg)
-      
-     &--prev
-       left: 18px
-       background-image: url(../img/arrow-prev.svg)
+    width: 100%
+    height: 100%
+    position: relative
+    border-radius: 8px
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+      z-index: 10
+    &__button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 99
+      width: 30px
+      height: 30px
+      border: none
+      cursor: pointer
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 10px
+      background-color: transparent
+      &--next
+        right: 18px
+        background-image: url(../img/arrow-next.svg)
+
+      &--prev
+        left: 18px
+        background-image: url(../img/arrow-prev.svg)
   &-name
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 24px
+    line-height: 30px
     text-transform: uppercase
   &-wrapper
-    
+
     display: flex
     flex-wrap: wrap
     align-items: center
   &-description
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 12px
+    line-height: 15px
   &-grid
     display: flex
     justify-content: space-between
-    
+
   &-right
-    width: 350px;
+    width: 350px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -83,10 +83,9 @@
 .stars
   flex-basis: 100%
 
-
 .offer
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 10px
+  line-height: 13px
   padding: 4px 9px
   background-color: $primary
   border-radius: 3px
@@ -112,14 +111,15 @@
   font-size: 10px
 
 .booking
-  
+  font-family: Nunito
+
   background-color: $dark
   color: $light
   border-radius: 8px
   min-height: 210px
   padding: 28px
   &__info
-    
+
     display: flex
     justify-content: space-between
     margin-bottom: 9px
@@ -138,7 +138,7 @@
     line-height: 16px
   &__room
     margin-top: 4px
-  
+
   &__text
     font-size: 12px
     line-height: 16px
@@ -180,12 +180,8 @@
     border: none
     color: $light
     cursor: pointer
+.map-wrapper
+  border-radius: 8px
+  overflow: hidden
 .map
   height: 213px
-  border-radius: 8px
-  
-
-
-
-
-
