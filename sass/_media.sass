@@ -152,13 +152,15 @@
         left: 0
         top: 0
         right: 0
-        z-index: 102
+        z-index: 103
+
     &__user, &__search
       &--mobile
         &_hidden
           display: none
         &_visible
           display: flex
+          margin-left: 40px
     &__user
       flex-direction: column
       justify-content: center
@@ -168,18 +170,24 @@
       top: 0
       right: 0
       bottom: 0
-      top: 78px
+      top: 74px
       padding-top: 30px
       &--visible
         display: block
         width: 100%
+        overflow: auto
     &-menu
       flex-direction: column
+      &--mobile
+        &_visible
+
       &__item
         margin-bottom: 20px
+
         &--mobile
           &_visible
             display: block
+            margin-right: 40px
 
     &-top
       padding-top: 28px
