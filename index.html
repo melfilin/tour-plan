@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./img/beach.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/beach.ico" type="image/x-icon" />
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=d31a9ae0-9b6b-40e1-a9a4-21769bcaeba0&lang=ru_RU"
       type="text/javascript"
@@ -538,11 +540,13 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
+            name="email"
+            
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -716,11 +720,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a class="logo footer__logo" href="index.html" 
+          
+          > <img src="img/vertical-logo.svg" alt="Logo">
+            
+          </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -852,20 +856,23 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title">Send us a message</h3>
-            <form action="#" class="footer__form">
+            <form action="send.php" method="POST" class="footer__form">
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name*"
+                name="name"
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
+                name="phone"
               />
               <textarea
                 class="footer__message"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>

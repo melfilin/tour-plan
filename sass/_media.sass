@@ -4,7 +4,7 @@
   .swiper
     &-container
       width: 590px
-      margin: 0
+      margin: 0 auto
   .hotel
     &-slider
       &__img
@@ -18,26 +18,17 @@
       flex-basis: 100%
   .packages
     &__big
-      width: 480px
+      width: 50%
       object-fit: cover
-    &__card
-      width: 465px
+    &__text
       &-big
-        .packages-price__new
+        padding: 30px 20px 40px 30px
+    &__card
+      max-width: 300px
+      &-big
 
     &__photo
       width: 465px
-
-  .hotel-1
-
-  .hotel-2
-    grid-row: 2
-  .hotel-3
-    grid-row: 2
-  .hotel-4
-    grid-row: 3
-  .hotel-5
-    grid-row: 3
 
 @media (max-width: 992px)
   .container, .newsletter-wrapper
@@ -122,21 +113,28 @@
       flex-basis: 49%
   .hotel-1
     grid-column: span 2
-    width: 700px
+  .hotel-2
+    grid-row: 2
+  .hotel-3
+    grid-row: 2
+  .hotel-4
+    grid-row: 3
+  .hotel-5
+    grid-row: 3
+
   .packages
+
     &__title
       font-size: 30px
     &__big
-      width: 347px
+
       object-fit: cover
     &__card
-      width: 335px
+      max-width: 335px
       &-big
-        .packages-price__new
 
     &__text
       &-big
-        padding-left: 22px
 
 @media (max-width: 768px)
 
@@ -287,40 +285,63 @@
     width: auto
     display: initial
     grid-column-start: -5
+
   .hotel-1
-    grid-column: span 2
-    width: 576px
+    grid-column: span 1
+    width: 100%
+  .hotel-3
+    grid-row: 3
+  .hotel-4
+    grid-row: 4
+  .hotel-5
+    grid-row: 5
+
   .packages
     &-wrapper
       grid-template-rows: auto
+      grid-template-columns: 100%
     &__title
-      font-size: 30px
+      font-size: 18px
+      margin-bottom: 42px
+    &__subtitle
+      font-size: 14px
     &__big
-      width: 347px
-      object-fit: cover
-    &__card
-      width: 273px
-      height: 450px
+      height: 200px
+      width: 100%
+      border-radius: 8px 8px 0 0
+
+    &__text
+      margin-bottom: 30px
+      font-size: 11px
       &-big
-        .packages-price__new
+        padding-top: 20px
+        padding-bottom: 30px
+    &__button
+      font-size: 12px
+      padding: 10px 14px
+    &-price
+      &__new
+        font-size: 20px
 
     &__mb
       &--37
         margin-bottom: 60px
 
-    &__photo
-      height: 200px
-    &-booking
-
-    &__button
-      padding: 10px 20px
-    &-price
-      &__new
-
-    &__text
-      font-size: 12px
+    &-card
+      &__room
+        font-size: 10px
+    &__card
+      width: 100%
+      max-width: 100%
       &-big
-        padding-right: 20px
+
+        .packages-price__new
+
+    &__photo
+      width: 100%
+  .hotel-1
+    display: flex
+    flex-direction: column
 
 @media (max-width: 576px)
   .logo
@@ -420,56 +441,6 @@
     padding-top: 53px
     &-wrapper
       grid-row-gap: 30px
-  .hotel-1
-    grid-column: span 1
-    width: 100%
-  .hotel-3
-    grid-row: 3
-  .hotel-4
-    grid-row: 4
-  .hotel-5
-    grid-row: 5
-
-  .packages
-    &-wrapper
-      grid-template-rows: auto
-      grid-template-columns: 100%
-    &__title
-      font-size: 18px
-      margin-bottom: 42px
-    &__subtitle
-      font-size: 14px
-    &__big
-      width: 50%
-      height: auto
-
-    &__text
-      margin-bottom: 30px
-      font-size: 11px
-      &-big
-        padding-top: 20px
-        padding-bottom: 20px
-    &__button
-      font-size: 12px
-      padding: 10px 14px
-    &-price
-      &__new
-        font-size: 20px
-
-    &__mb
-      &--37
-        margin-bottom: 60px
-
-    &-card
-      &__room
-        font-size: 10px
-    &__card
-      width: 100%
-      &-big
-        .packages-price__new
-
-    &__photo
-      width: 100%
 
 @media (max-width: 320px)
   .packages
@@ -479,7 +450,6 @@
     &__big
       width: 100%
       max-height: 200px
-      border-radius: 8px 8px 0 0
 
     &__text
       &-big
@@ -490,7 +460,3 @@
     &__card
       &-big
         .packages-price__new
-
-  .hotel-1
-    display: flex
-    flex-direction: column
