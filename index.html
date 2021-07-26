@@ -243,7 +243,9 @@
                   <span class="booking__num">12100</span>
                 </a>
               </div>
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <iframe
               class="map"
@@ -321,7 +323,9 @@
               <div class="packages-booking">
                 <span class="packages-price__new">$ 8,500</span>
 
-                <button class="packages__button">Book Now</button>
+                <button data-toggle="modal" class="packages__button">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -372,7 +376,9 @@
               <div class="packages-booking">
                 <span class="packages-price__new">$ 3,000</span>
 
-                <button class="packages__button">Book Now</button>
+                <button data-toggle="modal" class="packages__button">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -423,7 +429,9 @@
               <span class="packages-price__old">$ 10,500</span>
               <div class="packages-booking">
                 <span class="packages-price__new">$ 9,500</span>
-                <button class="packages__button">Book Now</button>
+                <button data-toggle="modal" class="packages__button">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -474,7 +482,9 @@
               <div class="packages-booking">
                 <span class="packages-price__new">$ 2,500</span>
 
-                <button class="packages__button">Book Now</button>
+                <button data-toggle="modal" class="packages__button">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -526,7 +536,9 @@
               <div class="packages-booking">
                 <span class="packages-price__new">$ 3,500</span>
 
-                <button class="packages__button">Book Now</button>
+                <button data-toggle="modal" class="packages__button">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -540,13 +552,16 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
+        <form
+          action="send.php"
+          method="POST"
+          class="subscribe newsletter__subscribe"
+        >
           <input
             type="email"
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
-            
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -679,7 +694,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
           <div class="card activities__card">
@@ -690,7 +705,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
           <div class="card activities__card">
@@ -701,7 +716,7 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
           <div class="card activities__card">
@@ -712,7 +727,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
         </div>
       </div>
@@ -720,10 +735,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a class="logo footer__logo" href="index.html" 
-          
-          > <img src="img/vertical-logo.svg" alt="Logo">
-            
+          <a class="logo footer__logo" href="index.html">
+            <img src="img/vertical-logo.svg" alt="Logo" />
           </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -870,7 +883,7 @@
                 name="phone"
               />
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>
@@ -895,6 +908,45 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="icon: close" />
+        </a>
+        <h3 class="modal__title">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Phone Number*"
+            name="phone"
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+          />
+          <textarea
+            class="message modal__message"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.min.js"></script>

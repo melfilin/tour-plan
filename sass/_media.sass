@@ -123,18 +123,17 @@
     grid-row: 3
 
   .packages
-
     &__title
-      font-size: 30px
+      font-size: 20px
     &__big
-
       object-fit: cover
     &__card
       max-width: 335px
-      &-big
 
-    &__text
-      &-big
+  .modal
+    &__dialog
+      padding: 30px 60px
+    &__info
 
 @media (max-width: 768px)
 
@@ -321,19 +320,18 @@
     &__text
       margin-bottom: 30px
       font-size: 11px
+      max-width: 100%
+
       &-big
         padding-top: 20px
         padding-bottom: 30px
+        width: 100%
     &__button
       font-size: 12px
-      padding: 10px 14px
+      padding: 12px 25px 13px 25px
     &-price
       &__new
         font-size: 20px
-
-    &__mb
-      &--37
-        margin-bottom: 60px
 
     &-card
       &__room
@@ -350,6 +348,18 @@
   .hotel-1
     display: flex
     flex-direction: column
+  .modal
+    &__button
+      width: 100%
+    &__form
+      flex-direction: column
+    &__dialog
+      padding: 30px 40px
+      width: 100%
+    &__info
+      justify-content: start
+
+      margin-top: 10px
 
 @media (max-width: 576px)
   .logo
