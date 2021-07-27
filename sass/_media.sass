@@ -15,7 +15,8 @@
     height: 230px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .packages
     &__big
       width: 50%
@@ -110,7 +111,8 @@
         grid-column: span 5
         grid-row: 4
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 48%
   .hotel-1
     grid-column: span 2
   .hotel-2
@@ -133,6 +135,9 @@
   .modal
     &__dialog
       padding: 30px 60px
+      height: 90%
+      max-height: 520px
+      overflow: scroll
     &__info
 
 @media (max-width: 768px)
@@ -279,7 +284,8 @@
   .footer
     padding-top: 53px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__contact
       &-form
         margin-bottom: 40px
@@ -349,13 +355,17 @@
     display: flex
     flex-direction: column
   .modal
+
     &__button
       width: 100%
     &__form
       flex-direction: column
+
     &__dialog
-      padding: 30px 40px
-      width: 100%
+      padding: 30px 30px
+      width: 90%
+      max-height: 570px
+
     &__info
       justify-content: start
 
@@ -459,6 +469,12 @@
     padding-top: 53px
     &-wrapper
       grid-row-gap: 30px
+  .modal
+    height: 200px
+    &__dialog
+      height: 90%
+      overflow: auto
+      max-height: 550px
 
 @media (max-width: 320px)
   .packages
