@@ -17,6 +17,7 @@
       type="text/javascript"
     ></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Best Tour Plan - Hotel booking</title>
   </head>
@@ -24,7 +25,7 @@
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo" data-aos="fade-right" data-aos-delay="100">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -35,6 +36,8 @@
           <form
             action="#"
             class="search navbar__search navbar__search--mobile_hidden"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
             <input
               type="text"
@@ -46,7 +49,12 @@
             </button>
           </form>
 
-          <a href="#" class="user navbar__user navbar__user--mobile_hidden">
+          <a
+            href="#"
+            class="user navbar__user navbar__user--mobile_hidden"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <img
               src="img/user-avatar.jpeg"
               alt="avatar: Nathan"
@@ -264,7 +272,12 @@
         <h2 class="packages__title">Other Packages</h2>
 
         <div class="packages-wrapper">
-          <div class="packages__card-big hotel-1">
+          <div
+            class="packages__card-big hotel-1"
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="500"
+          >
             <img
               class="packages__big"
               src="img/pack-1.jpeg"
@@ -330,7 +343,12 @@
             </div>
           </div>
 
-          <div class="packages__card hotel-2">
+          <div
+            class="packages__card hotel-2"
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="500"
+          >
             <img
               class="packages__photo"
               src="img/pack-2.jpeg"
@@ -383,7 +401,12 @@
             </div>
           </div>
 
-          <div class="packages__card hotel-3">
+          <div
+            class="packages__card hotel-3"
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-aos-duration="500"
+          >
             <img
               class="packages__photo"
               src="img/pack-3.jpeg"
@@ -436,7 +459,12 @@
             </div>
           </div>
 
-          <div class="packages__card hotel-4">
+          <div
+            class="packages__card hotel-4"
+            data-aos="fade-left"
+            data-aos-delay="400"
+            data-aos-duration="500"
+          >
             <img
               class="packages__photo"
               src="img/pack-4.jpeg"
@@ -489,7 +517,12 @@
             </div>
           </div>
 
-          <div class="packages__card hotel-5">
+          <div
+            class="packages__card hotel-5"
+            data-aos="fade-left"
+            data-aos-delay="500"
+            data-aos-duration="500"
+          >
             <img
               class="packages__photo"
               src="img/pack-5.jpeg"
@@ -556,6 +589,8 @@
           action="send.php"
           method="POST"
           class="subscribe newsletter__subscribe"
+          data-aos="fade-left"
+          data-aos-duration="700"
         >
           <input
             type="email"
@@ -686,7 +721,11 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <img
               src="img/activity-1.jpg"
               alt="The curious corner 
@@ -697,7 +736,11 @@
             <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <img
               src="img/activity-2.jpg"
               alt="Gymkhana club golf
@@ -708,7 +751,11 @@
             <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               src="img/activity-3.jpg"
               alt="Tamarind falls hiking
@@ -719,7 +766,11 @@
             <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
 
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             <img
               src="img/activity-4.jpg"
               alt="The blue marine discovery
@@ -918,7 +969,7 @@
     <div class="modal">
       <div class="modal__overlay"></div>
 
-      <div class="modal__dialog">
+      <div class="modal__dialog" ">
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon: close" />
         </a>
@@ -962,6 +1013,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
