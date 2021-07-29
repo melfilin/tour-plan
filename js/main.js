@@ -29,7 +29,7 @@ $(document).ready(function () {
     },
   });
 
-  $('.newsletter').parallax({ imageSrc: 'img/newsletter-bg.jpg' });
+  $('.newsletter').parallax({ imageSrc: 'img/newsletter-bg.webp' });
 
   var menuButton = $('.menu-button');
   menuButton.on('click', function () {
@@ -67,9 +67,41 @@ $(document).ready(function () {
   }
 
   // Обработка форм
+
   $('.form').each(function () {
+    jQuery.validator.addMethod(
+      'phoneRU',
+      function (phone, element) {
+        return phone.match(
+          /^(\+7)?[\s\-]?\(?[0-9][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
+        );
+      },
+      'Please enter correct number phone'
+    );
+    $.validator.addMethod(
+      'minlenghtphone',
+      function (value, element) {
+        return value.replace(/\D+/g, '').length > 10;
+      },
+      'Please enter correct number phone'
+    );
+    $.validator.addMethod(
+      'requiredphone',
+      function (value, element) {
+        return value.replace(/\D+/g, '').length > 1;
+      },
+      'Field is required'
+    );
+
     $(this).validate({
       errorClass: 'invalid',
+      rules: {
+        phone: {
+          required: true,
+          minlenghtphone: true,
+          phoneRU: true,
+        },
+      },
       messages: {
         name: {
           required: 'Please enter your name',
@@ -79,12 +111,21 @@ $(document).ready(function () {
           required: 'We need your email address to contact you',
           email: 'Your email address must be in the format of name@domain.com',
         },
-        phone: {
-          required: 'Phone is required',
-        },
       },
     });
   });
-  $('input[name="phone"]').mask('+7 (999) 999-99-99');
-  AOS.init();
+
+  $('.newsletter__subscribe').each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      messages: {
+        email: {
+          required: 'We need your email address to contact you',
+          email: 'Your email address must be in the format of name@domain.com',
+        },
+      },
+    });
+    $('input[name="phone"]').mask('+7 (999) 999-99-99');
+    AOS.init();
+  });
 });
