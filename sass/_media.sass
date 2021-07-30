@@ -30,6 +30,10 @@
     font-weight: 600
   .footer__other:hover
     text-decoration: underline
+  .modal__button:hover
+    color: $primary
+    background-color: #fff
+    font-weight: 700
 
 @media (max-width: 1200px)
   .container,
@@ -48,11 +52,14 @@
     height: 230px
   .footer
     &__input
-      margin-bottom: 15px
+      margin-top: 15px
+    &__input:first-child
+      margin-top: 0
+      margin-top: 15px
       &-group
         flex-basis: 100%
     &__message
-      margin-top: 0
+      margin-top: 15px
   .packages
     &__big
       width: 50%
@@ -198,7 +205,7 @@
   body
     padding-top: 78px
   .logo
-    width: 132px
+
   .navbar
     &--mobile
       &_fixed
@@ -207,6 +214,7 @@
         top: 0
         right: 0
         z-index: 103
+        height: 70px
 
     &__user, &__search
       &--mobile
@@ -302,11 +310,14 @@
   .map
     width: 100%
   .newsletter
+    padding: 80px 0 90px 0
     &-wrapper
       max-width: 576px
       width: 92%
-      flex-direction: column
-      align-items: flex-start
+
+      align-items: center
+    &__title
+      margin-right: 30px
   .reviews
     &-slider
       &__item
@@ -341,6 +352,13 @@
         margin-bottom: 40px
     &__logo
       margin-top: 0
+    &__categories
+      margin-right: 2px
+    &__additional
+      width: auto
+      grid-column: span 1
+      margin-left: -80px
+
   .other-wrapper
     grid-column-start: -5
     margin-bottom: 10px
@@ -456,9 +474,15 @@
     .container
       overflow: hidden
   .newsletter
-    height: auto
-    margin-bottom: 40px
-    padding: 54px 0 83px 0
+    padding-top: 54px
+    padding-bottom: 83px
+    height: 320px
+
+    &-wrapper
+
+      flex-direction: column
+      align-items: start
+
     &-title
       &__strong
         font-size: 30px
@@ -470,6 +494,7 @@
     width: 100%
     &__input
       padding-left: 20px
+
   .reviews
     padding: 0
 
@@ -477,6 +502,7 @@
       font-size: 18px
       max-width: 245px
       margin: 0 auto
+      margin-top: 40px
       line-height: 23px
       margin-bottom: 42px
     &-slider
@@ -505,7 +531,6 @@
         margin-bottom: 15px
         font-weight: bold
         font-size: 18px
-
         text-transform: uppercase
 
     &-wrapper
@@ -589,7 +614,6 @@
       margin-top: 0
       margin-bottom: 36px
   .phone
-    margin-top: -16px
 
 @media (max-width: 320px)
   .container
