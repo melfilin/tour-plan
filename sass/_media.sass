@@ -20,8 +20,9 @@
     font-weight: 600
   .footer__link:hover
     text-decoration: underline
-  .footer__phone:hover
+  .footer__call:hover
     text-decoration: underline
+
   .footer__email:hover
     text-decoration: underline
   .footer__button:hover
@@ -60,6 +61,9 @@
         flex-basis: 100%
     &__message
       margin-top: 15px
+    &__items
+      flex-wrap: nowrap
+      align-items: center
   .packages
     &__big
       width: 50%
@@ -432,7 +436,8 @@
     &__dialog
       padding: 30px 30px
       width: 90%
-      max-height: 570px
+      max-height: 550px
+      overflow: hidden
 
     &__info
       justify-content: start
